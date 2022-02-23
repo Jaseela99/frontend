@@ -20,12 +20,27 @@
 
         </ul> -->
     <!-- <script type="text/javascript">
+//creating react using static html file 
         //by dom manipulation : whenever we create an element , it restarts the whole html file.
 
         // const element = document.createElement ("h1")
         //     const text = document.createTextNode("hello")
         //     element.append(text)
         //     document.getElementById("root").append(element)
+//using dom
+const rootElement = document.getElementById("root")
+const element = document.createElement("div")
+element.textContent ="hello"
+element.className = "container"
+rootElement.aapendChild(element)
+
+//using react unpkg
+
+const rootElement = document.getElementById("root")
+const element = document.createElement("div",{children:"hello",
+className:"container"})
+
+ReactDOM.render(element,rootElement)
 
         //using react library
 
@@ -58,18 +73,14 @@
 
         </ul>
     ReactDOM.render(element,document.getElementById("root"))  */
-//minify task
-//const minify = require('gulp-minify');
-/*  
-gulp.task('compress', function() {
-  gulp.src(['lib/*.js', 'lib/*.mjs']) //minifies all the js files and store it in dist and we can send dist to the server
-    .pipe(minify())
-    .pipe(gulp.dest('dist'))
-});
 
-    */
+    //using jsx in react
+    const rootElement =document.getElementById("root")
+    const myClassName = "container"
+    const children = "hello"
+    const element = (<div className={myClassName}>{children}</div>)
    
-   
+   ReactDOM.render(element,rootElement)
    //helloworld
 
    //ReactDOM.render( <h1>Hello, world!</h1>, document.getElementById('root'));
