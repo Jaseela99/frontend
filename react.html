@@ -30,7 +30,7 @@
         //using react library
 
         //const element = React.createElement("h1",{class:"roots"},"hello")  //it takes the tag ,attribute and innerhtml
-
+        //const element = React.createElement("h1",{children:["hello world","goodbye"]}) //another method
         //ReactDOM.render(element,document.getElementById("root")) //render is used to append , it takes the element to be appended and the destination
 
     //to create lists
@@ -43,6 +43,7 @@
         React.createElement("li",null,"list3"),
         React.createElement("li",null,"list4"),
         )
+        //const element = React.createElement("ul",{children:React.createElement("li",null,list1)})
         ReactDOM.render(element,document.getElementById("root")) */
     </script> -->
  
@@ -66,7 +67,56 @@ gulp.task('compress', function() {
     .pipe(gulp.dest('dist'))
 });
 
-    */ </script> -->
+    */
+   
+   
+   //helloworld
+
+   //ReactDOM.render( <h1>Hello, world!</h1>, document.getElementById('root'));
+
+   //JSX a variable name is declared and embedded inside js
+
+   /* const name = 'Jaseela';
+   const element = <h1>Hello, {name}</h1>;
+
+    ReactDOM.render(element,document.getElementById('root'));
+    */
+
+    //using js expression 
+/* 
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+); */
+
+//components
+
+//functional 
+
+/* function welcome(props) {  //it accepts properties with data and returns a react element
+    return <h1> Hello,{props.name}</h1>
+} */
+
+//class
+   
+   
+  
+   </script> 
 </div>
 </body>
 </html>
