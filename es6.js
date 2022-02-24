@@ -42,6 +42,46 @@ class Car {
 
   //array.map can be used to generate lists.
 
-  const myArray = ['apple', 'banana', 'orange'];
+ /*  const myArray = ['apple', 'banana', 'orange'];
 
-const myList = myArray.map((item) => <p>{item}</p>)
+const myList = myArray.map((item) => <p>{item}</p>) */
+
+//destructuring of arrays =. assigning array items to variables
+/* const vehicles = ['mustang', 'f-150', 'expedition'];
+
+const [car,, suv] = vehicles; */
+
+//it is used when a function returns an array
+
+/* function calculate(a, b) {
+  const add = a + b;
+  const subtract = a - b;
+  const multiply = a * b;
+  const divide = a / b;
+
+  return [add, subtract, multiply, divide];
+}
+
+const [add, subtract, multiply, divide] = calculate(4, 7); */
+
+
+//destructuring objects
+
+const vehicleOne = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021, 
+  color: 'red',
+  registration: {
+    city: 'Houston',
+    state: 'Texas',
+    country: 'USA'
+  }
+}
+
+myVehicle(vehicleOne)
+
+function myVehicle({ model, registration: { state } }) {
+  const message = 'My ' + model + ' is registered in ' + state + '.';
+}
