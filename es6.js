@@ -85,3 +85,63 @@ myVehicle(vehicleOne)
 function myVehicle({ model, registration: { state } }) {
   const message = 'My ' + model + ' is registered in ' + state + '.';
 }
+
+//spread operators
+
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne, ...numbersTwo];
+
+
+//assigning rest of the numbers with rest
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const [one, two, ...rest] = numbers;
+
+//for objects
+//combines both object and updates the key values which is already present
+const myVehicle = {
+  brand: 'Ford',
+  model: 'Mustang',
+  color: 'red'
+}
+
+const updateMyVehicle = {
+  type: 'car',
+  year: 2021, 
+  color: 'yellow'
+}
+
+const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
+
+
+//modules
+//export
+
+//inline
+export const name = "Jesse"
+export const age = 40
+
+//at  bottom 
+const name = "Jesse"
+const age = 40
+
+export { name, age }
+
+//default
+
+const message = () => {
+  const name = "Jesse";
+  const age = 40;
+  return name + ' is ' + age + 'years old.';
+};
+
+export default message;
+
+//named import
+
+import { name, age } from "./person.js";
+
+//default import
+import message from "./message.js";
