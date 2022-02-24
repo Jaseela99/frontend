@@ -15,7 +15,7 @@ class Car {
 
   class Model extends Car { //it inherits methods from class car
     constructor(name, mod) {
-      super(name);
+      super(name); //it refers to parents class and get access to parents constructor methods and properties
       this.model = mod;
     }  
     show() {
@@ -28,3 +28,20 @@ class Car {
   mycar.show()
 
  */
+
+  /* //Arrow functions
+
+  const hello = () => {
+    return "Hello World!";
+  }
+
+  hello = () => "Hello World!";//for single statement
+  hello = val => "Hello " + val;//for single paranthesis */
+
+
+
+  //array.map can be used to generate lists.
+
+  const myArray = ['apple', 'banana', 'orange'];
+
+const myList = myArray.map((item) => <p>{item}</p>)
