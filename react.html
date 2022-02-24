@@ -1,165 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>  <!-- to create react elements -->
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script> <!-- to append to dom -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!-- directly add html elements -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <!-- to create react elements -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <!-- to append to dom -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- directly add html elements -->
     <title>Document</title>
-</head>
-<body>
-    <div id = "root">
+  </head>
+  <body>
+    <div id="root">
+      <!-- <script type="text/javascript">
 
-        <!-- <ul>
-         <li>list1</li>
-         <li>list2</li>
-         <li>list3</li>
-         <li>list4</li>
+ //creating react using static html file 
 
-        </ul> -->
-    <!-- <script type="text/javascript">
-//creating react using static html file 
-        //by dom manipulation : whenever we create an element , it restarts the whole html file.
+ //by dom manipulation : whenever we create an element , it restarts the whole html file.
 
-        // const element = document.createElement ("h1")
-        //     const text = document.createTextNode("hello")
-        //     element.append(text)
-        //     document.getElementById("root").append(element)
-//using dom
-const rootElement = document.getElementById("root")
-const element = document.createElement("div")
-element.textContent ="hello"
-element.className = "container"
-rootElement.aapendChild(element)
+ const element = document.createElement ("h1")
+ const text = document.createTextNode("hello")
+ element.append(text)
+ document.getElementById("root").append(element)
 
-//using react unpkg
+  //using dom
 
-const rootElement = document.getElementById("root")
-const element = document.createElement("div",{children:"hello",
-className:"container"})
+ const rootElement = document.getElementById("root")
+ const element = document.createElement("div")
+ element.textContent ="hello"
+ element.className = "container"
+ rootElement.aapendChild(element)
 
-ReactDOM.render(element,rootElement)
+ //using react unpkg
 
-        //using react library
+ const rootElement = document.getElementById("root")
+ const element = document.createElement("div",{children:"hello",
+ className:"container"})
 
-        //const element = React.createElement("h1",{class:"roots"},"hello")  //it takes the tag ,attribute and innerhtml
-        //const element = React.createElement("h1",{children:["hello world","goodbye"]}) //another method
-        //ReactDOM.render(element,document.getElementById("root")) //render is used to append , it takes the element to be appended and the destination
+ ReactDOM.render(element,rootElement)
 
-    //to create lists
+//using react library
 
-    /* const element = React.createElement(
-        "ul",
-        null,
-        React.createElement("li",null,"list1"),
-        React.createElement("li",null,"list2"),
-        React.createElement("li",null,"list3"),
-        React.createElement("li",null,"list4"),
-        )
-        //const element = React.createElement("ul",{children:React.createElement("li",null,list1)})
-        ReactDOM.render(element,document.getElementById("root")) */
-    </script> -->
- 
-    <script type="text/babel">
-//javascript xml :xml is written inside js
-        //babel 
-        /* const element=<ul> 
-         <li>list1</li>
-         <li>list2</li>
-         <li>list3</li>
-         <li>list4</li>
+  const element = React.createElement("h1",{class:"roots"},"hello")  //it takes the tag ,attribute and innerhtml
+  const element = React.createElement("h1",{children:["hello world","goodbye"]}) //another method
+  ReactDOM.render(element,document.getElementById("root")) //render is used to append , it takes the element to be appended and the destination
 
-        </ul>
-    ReactDOM.render(element,document.getElementById("root"))  */
+ //to create lists
 
-    //using jsx in react
-    const rootElement =document.getElementById("root")
-    const myClassName = "container"
-    const children = "hello"
-    const element = (<div className={myClassName}>{children}</div>)
-   
-   ReactDOM.render(element,rootElement)
-   //helloworld
+  const element = React.createElement(
+    "ul",
+    null,
+    React.createElement("li",null,"list1"),
+    React.createElement("li",null,"list2"),
+    React.createElement("li",null,"list3"),
+    React.createElement("li",null,"list4"),
+    )
+    //const element = React.createElement("ul",{children:React.createElement("li",null,list1)})
+    ReactDOM.render(element,document.getElementById("root")) */
+</script> -->
 
-   //ReactDOM.render( <h1>Hello, world!</h1>, document.getElementById('root'));
+  <script type="text/babel">
 
-   //JSX a variable name is declared and embedded inside js
+  //javascript xml :xml is written inside js
 
-   /* const name = 'Jaseela';
+  //babel
+  /* const element=<ul> 
+  <li>list1</li>
+  <li>list2</li>
+  <li>list3</li>
+  <li>list4</li>
+
+  </ul>
+ ReactDOM.render(element,document.getElementById("root"))  */
+
+  //using jsx in react
+
+  //we can includes expresiions of js with in curlybrackets in jsx
+
+  /* const rootElement =document.getElementById("root")
+  const myClassName = "container"
+  const children = "hello"
+  const element = (<div className={myClassName}>{children}</div>)
+
+  //props
+  const props ={children,myClassName}
+  //additional properties can be added and the properties can be changed
+  const element = <div id = "app-root"{...props} className="containers"/>
+
+  ReactDOM.render(element,rootElement) */
+
+//rendering two elements
+
+  //using react
+
+  /* const helloelement = React.createElement("span",null,"hello")
+  const worldElement = React.createElement("span",null,"world")
+  //react fragment is used to render two elements
+  const element =React.createElement(React.Fragment,null,helloelement,worldElement)
+  ReactDOM.render(element,document.getElementById("root"))
+ */
+
+
+ //using jsx
+  /* const element = <React.Fragment>
+  <span>Hello</span> <span>world</span>
+  </React.Fragment>
+ */
+
+  //helloworld
+
+  //ReactDOM.render( <h1>Hello, world!</h1>, document.getElementById('root'));
+
+
+ //JSX a variable name is declared and embedded inside js
+
+
+  /* const name = 'Jaseela';
    const element = <h1>Hello, {name}</h1>;
 
     ReactDOM.render(element,document.getElementById('root'));
     */
 
-    //using js expression 
-/* 
-function formatName(user) {
+ //using js expression
+ /* 
+ function formatName(user) {
   return user.firstName + ' ' + user.lastName;
-}
+ }
 
-const user = {
+ const user = {
   firstName: 'Harper',
   lastName: 'Perez'
-};
+ };
 
-const element = (
+ const element = (
   <h1>
-    Hello, {formatName(user)}!
+ Hello, {formatName(user)}!
   </h1>
-);
+ );
 
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-); */
+ ReactDOM.render(element,document.getElementById('root')); */
 
-//components
+ //components
 
-//functional 
+ //functional
 
-/* function welcome(props) {  //it accepts properties with data and returns a react element
-    return <h1> Hello,{props.name}</h1>
-} */
+  /* function welcome(props) {  //it accepts properties with data and returns a react element
+  return <h1> Hello,{props.name}</h1>
+  } */
 
-//class
-   /* class Welcome extends React.Component {
-     render(){
-       return <h1>hello,{this.props.name}</h1>
-     }
-   } */
-   
-//rendering a component
-/* function Welcome(props){
+  //class
+ /* class Welcome extends React.Component {
+  render(){
+  return <h1>hello,{this.props.name}</h1>
+  }
+  } */
+
+  //rendering a component
+
+  /* function Welcome(props){
   return <h1> hello,{props.name}</h1>//it returns <h1>hello Jaseela</h1> as the result
-}
-   const element =<Welcome name = "Jaseela"/> //calls welcome component with {name:"jaseela"} as props
-   ReactDOM.render(
+ }
+  const element =<Welcome name = "Jaseela"/> //calls welcome component with {name:"jaseela"} as props
+  ReactDOM.render(
   element,
   document.getElementById('root') //appending element in to root
-); */
+  ); */
 
-//composing component 
+ //composing component
 
-/* function Welcome(props){
+  /* function Welcome(props){
   return <h1>Hello {props.name}</h1>
-}
+ }
   function App(){
-    return (
-<div>
+  return (
+ <div>
   <Welcome name = "jaseela"/>
   <Welcome name = "jaseena"/>
   </div>
-    )
-}
-  ReactDOM.render(
-    <App />,
-    document.getElementById("root")
   )
- */
-
-   </script> 
-</div>
-</body>
+  }
+  ReactDOM.render(<App />,document.getElementById("root"))*/
+      </script>
+    </div>
+  </body>
 </html>
