@@ -115,6 +115,19 @@
   </React.Fragment>
  */
 
+ //reusing using props
+
+ //here Message is a functional component
+ const Message =props=><div > {props.msg} </div>
+ 
+ const element =(
+ <div>
+  <Message msg="hello world"/>
+  <Message msg="bye world"/>
+  </div>
+ )
+  ReactDOM.render(element,document.getElementById("root"))
+
   //helloworld
 
   //ReactDOM.render( <h1>Hello, world!</h1>, document.getElementById('root'));
