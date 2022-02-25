@@ -67,7 +67,7 @@ const [add, subtract, multiply, divide] = calculate(4, 7); */
 
 //destructuring objects
 
-const vehicleOne = {
+/* const vehicleOne = {
   brand: 'Ford',
   model: 'Mustang',
   type: 'car',
@@ -84,24 +84,24 @@ myVehicle(vehicleOne)
 
 function myVehicle({ model, registration: { state } }) {
   const message = 'My ' + model + ' is registered in ' + state + '.';
-}
+} */
 
 //spread operators
 
-const numbersOne = [1, 2, 3];
+/* const numbersOne = [1, 2, 3];
 const numbersTwo = [4, 5, 6];
 const numbersCombined = [...numbersOne, ...numbersTwo];
 
-
+ */
 //assigning rest of the numbers with rest
 
-const numbers = [1, 2, 3, 4, 5, 6];
+/* const numbers = [1, 2, 3, 4, 5, 6];
 
-const [one, two, ...rest] = numbers;
+const [one, two, ...rest] = numbers; */
 
 //for objects
 //combines both object and updates the key values which is already present
-const myVehicle = {
+/* const myVehicle = {
   brand: 'Ford',
   model: 'Mustang',
   color: 'red'
@@ -115,33 +115,37 @@ const updateMyVehicle = {
 
 const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
 
-
+ */
 //modules
 //export
 
 //inline
-export const name = "Jesse"
+/* export const name = "Jesse"
 export const age = 40
-
+ */
 //at  bottom 
-const name = "Jesse"
+/* const name = "Jesse"
 const age = 40
-
-export { name, age }
+ 
+export { name, age }*/
 
 //default
 
-const message = () => {
+/* const message = () => {
   const name = "Jesse";
   const age = 40;
   return name + ' is ' + age + 'years old.';
 };
 
-export default message;
+export default message; */
 
 //named import
 
-import { name, age } from "./person.js";
+//import { name, age } from "./person.js";
 
 //default import
-import message from "./message.js";
+//import message from "./message.js";
+
+
+//ternary operator
+//authenticated ? renderApp() : renderLogin();
