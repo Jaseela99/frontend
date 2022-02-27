@@ -165,10 +165,29 @@ const myelement = <h1>{text}</h1>; */
 
 const myelement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>; */
 
+//creating list and traversing using arrays and map function
+
+/* import React from 'react';
+import ReactDOM from 'react-dom';
+
+const numbers = [1,2,3,4,5];
+
+const updatedNums = numbers.map((number)=>{
+	return <li>{number}</li>;
+});
+
+ReactDOM.render(
+	<ul>
+		{updatedNums}
+	</ul>,
+	document.getElementById('root')
+); */
+
+
  //reusing using props
 
  //here Message is a functional component
- const Message =props=><div > {props.msg} </div>
+ /* const Message =props=><div > {props.msg} </div>
  
  const element =(
  <div>
@@ -178,7 +197,7 @@ const myelement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>; */
  )
   ReactDOM.render(element,document.getElementById("root"))
 
-  
+   */
 
   //helloworld
 
@@ -217,27 +236,21 @@ const myelement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>; */
 
  //functional
 
-  /* function welcome(props) {  //it accepts properties with data and returns a react element
-  return <h1> Hello,{props.name}</h1>
-  } */
+  /* function Car() {
+  return <h2>Hi, I am a Car!</h2>;
+} */
 
-  //class
- /* class Welcome extends React.Component {
-  render(){
-  return <h1>hello,{this.props.name}</h1>
+  //class component 
+
+  /* class Car extends React.Component {  //extends React.Component  provides components access  to react.components functions
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
   }
-  } */
+} */
 
   //rendering a component
 
-  /* function Welcome(props){
-  return <h1> hello,{props.name}</h1>//it returns <h1>hello Jaseela</h1> as the result
- }
-  const element =<Welcome name = "Jaseela"/> //calls welcome component with {name:"jaseela"} as props
-  ReactDOM.render(
-  element,
-  document.getElementById('root') //appending element in to root
-  ); */
+ // ReactDOM.render(<Car />, document.getElementById('root'));
 
  //composing component
 
