@@ -110,10 +110,60 @@
 
 
  //using jsx
+
+ /* const myelement = <h1>I Love JSX!</h1>;
+
+ ReactDOM.render(myelement, document.getElementById('root'));
+
+ //jsx expressions
+
+ const myelement = <h1>React is {5 + 5} times better with JSX</h1>;
+ */
+
+ //to include multiple elements we can add a parent element
+
+ /* const myelement = (
+  <div>
+    <p>I am a paragraph.</p>
+    <p>I am a paragraph too.</p>
+  </div>
+); */
+
+//react.fragment can be added to add multiple elements
+
   /* const element = <React.Fragment>
   <span>Hello</span> <span>world</span>
   </React.Fragment>
  */
+
+//className is used instead of class
+
+//string literals:attribute values are written in strings
+
+//const myelement = <h1 className="myclass">Hello World</h1>; 
+
+//expressions : can be represented in curly braces
+
+//const myelement = <h1 className={var name}>Hello World</h1>;
+
+//comments
+{/ * This is a comment in JSX * /}
+
+//if must be used outside of jsx or ternary operator can be used
+
+/* const x = 5;
+let text = "Goodbye";
+if (x < 10) {
+  text = "Hello";
+}
+
+const myelement = <h1>{text}</h1>; */
+
+//ternary operator
+
+/* const x = 5;
+
+const myelement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>; */
 
  //reusing using props
 
@@ -127,6 +177,8 @@
   </div>
  )
   ReactDOM.render(element,document.getElementById("root"))
+
+  
 
   //helloworld
 
@@ -200,7 +252,7 @@
   </div>
   )
   }
-  ReactDOM.render(<App />,document.getElementById("root"))*/
+  ReactDOM.render(<App />,document.getElementById("root"))*/ //to render html file in webpage, it takes the html element and where we need to append the element
       </script>
     </div>
   </body>
