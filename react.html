@@ -317,24 +317,51 @@ ReactDOM.render(<Football />, document.getElementById('root'));
 //hooks
 
 //useState
-
+// we can use multiple states
 //read  and update state
 import {useState} from "react"
-function FavColor(){
-  //color is our current state, and setColor is the function to update state
-  const [color,setColor] = useState("") //here initial state is an empty array
+//  function FavColor(){
+//   //color is our current state, and setColor is the function to update state
+//   const [color,setColor] = useState("") //here initial state is an empty array
+//   const [year,setYear] = useState("")
+//   return (
+//     <>
+//     <h1>i was born in {year}</h1>
+//     <h1>{color} is my fav color</h1>
+//     setColor("blue") {/* update state */}
+//     setYear("1999")
+//     </>
+
+//   )
+
+// }
+//using state variable inside rendered component
+//ReactDOM.render(<FavColor/>,document.getElementById("root"))
+
+//using one state and include an object
+import { useState } from "react";
+import ReactDOM from "react-dom";
+
+function Car() {
+  const [car, setCar] = useState({
+    brand: "Ford",
+    model: "Mustang",
+    year: "1964",
+    color: "red"
+  });
+
   return (
     <>
-    <h1>{color} is my fav color</h1>
-    setColor("blue") {/* update state */}
+      <h1>My {car.brand}</h1>
+      <p>
+        It is a {car.color} {car.model} from {car.year}.
+      </p>
     </>
-
   )
-
 }
-//using state variable inside rendered component
-ReactDOM.render(<FavColor/>,document.getElementById("root"))
-   </script>
-    </div>
+
+ReactDOM.render(<Car />, document.getElementById('root'));
+</script>
+</div>
   </body>
 </html>
