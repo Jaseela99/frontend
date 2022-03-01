@@ -252,21 +252,68 @@ ReactDOM.render(
 
  // ReactDOM.render(<Car />, document.getElementById('root'));
 
- //composing component
+ //props: it is passed as arguement in a component
 
-  /* function Welcome(props){
-  return <h1>Hello {props.name}</h1>
- }
-  function App(){
+ /* function Car(props) {
+  return <h2>I am a {props.color} Car!</h2>;
+}
+
+ReactDOM.render(<Car color="red"/>, document.getElementById('root')); //instead of "red " if we have a variable we can add it inside {}
+ */
+
+ //to send a variable 
+
+ /* function Car(props) {
+  return <h2>I am a { props.brand }!</h2>;
+}
+
+function Garage() {
+  const carName = "Ford";
   return (
- <div>
-  <Welcome name = "jaseela"/>
-  <Welcome name = "jaseena"/>
-  </div>
-  )
+    <>
+      <h1>Who lives in my garage?</h1>
+      <Car brand={ carName } />
+    </>
+  );
+}
+
+ReactDOM.render(<Garage />, document.getElementById('root')); */
+
+//to pass object 
+
+/* function Car(props) {
+  return <h2>I am a { props.brand.model }!</h2>;
+}
+
+function Garage() {
+  const carInfo = { name: "Ford", model: "Mustang" };
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <Car brand={ carInfo } />
+    </>
+  );
+}
+
+ReactDOM.render(<Garage />, document.getElementById('root')); */
+
+//events onClick is the event and shoot is the eventhandler
+/* function Football() {
+  const shoot = () => {
+    alert("Great Shot!");
   }
-  ReactDOM.render(<App />,document.getElementById("root"))*/ //to render html file in webpage, it takes the html element and where we need to append the element
-      </script>
+
+  return (
+    <button onClick={shoot}>Take the shot!</button> //event and eventhandler
+    //to pass a parameter inside shoot
+    <button onClick={()=>shoot("goal")}>Take the shot ! </button>
+  );
+}
+
+ReactDOM.render(<Football />, document.getElementById('root'));
+ */
+
+   </script>
     </div>
   </body>
 </html>
