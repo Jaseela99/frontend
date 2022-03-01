@@ -313,6 +313,27 @@ ReactDOM.render(<Garage />, document.getElementById('root')); */
 ReactDOM.render(<Football />, document.getElementById('root'));
  */
 
+
+//hooks
+
+//useState
+
+//read  and update state
+import {useState} from "react"
+function FavColor(){
+  //color is our current state, and setColor is the function to update state
+  const [color,setColor] = useState("") //here initial state is an empty array
+  return (
+    <>
+    <h1>{color} is my fav color</h1>
+    setColor("blue") {/* update state */}
+    </>
+
+  )
+
+}
+//using state variable inside rendered component
+ReactDOM.render(<FavColor/>,document.getElementById("root"))
    </script>
     </div>
   </body>
