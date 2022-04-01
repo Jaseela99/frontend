@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from "react"
+/* import React,{useEffect,useState} from "react"
 
 const userList=()=>{
 const [users,setUsers]=useState([])
@@ -28,3 +28,4 @@ return
 
 }
 export default userList
+ */

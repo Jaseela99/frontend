@@ -1,4 +1,4 @@
-import React from "react"
+/* import React from "react"
 //without jsx
 const Hello = ()=>{
     //appending child 
@@ -6,4 +6,4 @@ return React.createElement("div",{id:"hello",className:"dummy class"},React.crea
 
 
 }
- export default Hello
+ export default Hello */

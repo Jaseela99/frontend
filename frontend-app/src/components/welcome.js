@@ -1,4 +1,4 @@
-//to add class component we need react and component
+/* //to add class component we need react and component
 import React,{ Component } from "react"
 
 class Welcome extends Component{
@@ -7,4 +7,4 @@ class Welcome extends Component{
     }
 }
 
-export default Welcome
+export default Welcome */
